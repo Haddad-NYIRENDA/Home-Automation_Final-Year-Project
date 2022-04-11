@@ -107,7 +107,7 @@ class _LandingPageState extends State<LandingPage> {
                             builder: (context, snap) {
                               if (snap.connectionState ==
                                   ConnectionState.waiting) {
-                                return Container();
+                                return CircularProgressIndicator();
                               } else if (snap.hasData) {
                                 DatabaseEvent evt = snap.data as DatabaseEvent;
                                 dynamic data = evt.snapshot.value as Map;
@@ -162,7 +162,7 @@ class _LandingPageState extends State<LandingPage> {
                               builder: (context, snap) {
                                 if (snap.connectionState ==
                                     ConnectionState.waiting) {
-                                  return Container();
+                                  return CircularProgressIndicator();
                                 } else if (snap.hasData) {
                                   DatabaseEvent evt =
                                       snap.data as DatabaseEvent;
@@ -285,7 +285,7 @@ class _LandingPageState extends State<LandingPage> {
                                 builder: (context, snap) {
                                   if (snap.connectionState ==
                                       ConnectionState.waiting) {
-                                    return Container();
+                                    return CircularProgressIndicator();
                                   } else if (snap.hasData) {
                                     DatabaseEvent evt =
                                         snap.data as DatabaseEvent;
@@ -355,7 +355,7 @@ class _LandingPageState extends State<LandingPage> {
                                 builder: (context, snap) {
                                   if (snap.connectionState ==
                                       ConnectionState.waiting) {
-                                    return Container();
+                                    return CircularProgressIndicator();
                                   } else if (snap.hasData) {
                                     DatabaseEvent evt =
                                         snap.data as DatabaseEvent;

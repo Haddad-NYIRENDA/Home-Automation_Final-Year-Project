@@ -176,7 +176,7 @@ class _MonitorPageState extends State<MonitorPage> {
                                             style:
                                                 TextStyle(color: Colors.black),
                                           )
-                                        : Text("Needs attention",
+                                        : Text("Attention!",
                                             style:
                                                 TextStyle(color: Colors.black));
                                   } else if (snapshot.hasError) {
@@ -260,7 +260,7 @@ class _MonitorPageState extends State<MonitorPage> {
                                             style:
                                                 TextStyle(color: Colors.black),
                                           )
-                                        : Text("Needs attention",
+                                        : Text("Attention!",
                                             style:
                                                 TextStyle(color: Colors.black));
                                   } else if (snapshot.hasError) {
