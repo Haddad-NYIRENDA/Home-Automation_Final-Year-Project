@@ -172,7 +172,7 @@ class _LivePowerGraphState extends State<LivePowerGraph> {
 
   /// Dynamicallys updates power chart data
   ///
-  /// Receives a Timer object as input
+  /// Periodically updates using [timer] as input
   void updateDataSource(Timer timer) {
     _chartData.add(LiveEnergyData(
         timestamp: time++, value: ((math.Random().nextDouble()) * 400)));
