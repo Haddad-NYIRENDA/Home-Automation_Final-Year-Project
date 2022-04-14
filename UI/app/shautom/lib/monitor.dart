@@ -6,8 +6,8 @@ import 'package:firebase_database/firebase_database.dart';
 
 import 'package:intl/intl.dart';
 
+/// The decimal pattern format for numbers
 var formatter = NumberFormat.decimalPattern('en_us');
-//var decimalFormatter = NumberFormat.0
 
 /// Monitoring Dashboard Stateful Widget
 class MonitorPage extends StatefulWidget {
@@ -35,6 +35,7 @@ class _MonitorPageState extends State<MonitorPage> {
   /// Initializes Firebase realtime database configuration & state
   //FirebaseDatabase.instance.setPersistenceEnabled(true);
   Future<void> init() async {
+    /// Defines the Firebase realtime database instance reference
     _dhtRef = FirebaseDatabase.instance
         .ref("Shautom/User/2vtcqvRNBVUPi0XtnxbUJRAy9GE2/sensor_readings/");
 
