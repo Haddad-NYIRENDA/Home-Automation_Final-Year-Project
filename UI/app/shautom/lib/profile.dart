@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'models/user.dart';
 
+/// User Profile/Settings
 class ProfilePage extends StatelessWidget {
   //final GlobalKey<_HomePageState> homeKey = GlobalKey<_HomePageState>();
   final UserModel? user;
