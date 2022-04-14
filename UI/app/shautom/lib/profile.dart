@@ -17,6 +17,7 @@ class ProfilePage extends StatelessWidget {
   }
 }
 
+/// User Settings
 class Settings extends StatelessWidget {
   final UserModel? user;
   Settings({Key? key, required this.user}) : super(key: key);
@@ -28,6 +29,7 @@ class Settings extends StatelessWidget {
     );
   }
 
+  /// Build helper method - builds settings page
   Widget _mySettings(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
