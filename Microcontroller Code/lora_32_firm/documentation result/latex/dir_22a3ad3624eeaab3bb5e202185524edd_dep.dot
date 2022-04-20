@@ -1,0 +1,11 @@
+digraph "C:/Users/Hadad NYIRENDA/Desktop/Work/Home-Automation_Final-Year-Project/Microcontroller Code/lora_32_firm"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_2cd2d5a08b175bba954c57c015d7f57b {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="Microcontroller Code", fontname="Helvetica", fontsize="10", URL="dir_2cd2d5a08b175bba954c57c015d7f57b.html"]
+  dir_22a3ad3624eeaab3bb5e202185524edd [shape=box, label="lora_32_firm", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_22a3ad3624eeaab3bb5e202185524edd.html"];
+  }
+}

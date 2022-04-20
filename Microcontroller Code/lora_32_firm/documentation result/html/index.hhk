@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a187af7b881bea2905b906b75ac61c951"><param name="Name" value="API_KEY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a7750ff0242cbad0d27af32955ffc558b"><param name="Name" value="DATABASE_URL"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a757bb4e2bff6148de6ef3989b32a0126"><param name="Name" value="DHTPIN"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a2c509dba12bba99883a5be9341b7a0c5"><param name="Name" value="DHTTYPE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a9fa6f083fd9b05ac8a6b94f34322661e"><param name="Name" value="LDR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#afb8d6cd804180ab822bba5458b9ca7fb"><param name="Name" value="RELAY1"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#ac343cbc35387891c8a113511ea616375"><param name="Name" value="RELAY2"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a38b2cde7b7031bb8ae0b70212ae15742"><param name="Name" value="USER_EMAIL"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a860ee33efc898dd1efb8a3e2fb299f43"><param name="Name" value="USER_PASSWORD"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8c83bc760185689dd4dd65602e2f0cda"><param name="Name" value="WIFI_PASSWORD"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#acfbdc371ef3f82e0319587e6be185631"><param name="Name" value="WIFI_SSID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aecbaea371d434c4a1e67568844435de6"><param name="Name" value="auth"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#adf9e5e8e4c533f3f34b4b5b8a5d05f79"><param name="Name" value="calibrationTime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a5ad753240216beef4b6f05ce546268e3"><param name="Name" value="config"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#ad93ea1260e26bb5ac4f8dcf12409fc33"><param name="Name" value="databasePath1"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a4b1d73b78e41e89be05065a491e03ff9"><param name="Name" value="databasePath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a2a9fec03258233e351f904b67c9bb1af"><param name="Name" value="delayMS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aaa9d06b30645a78cecf7e0ccbf5d1a6a"><param name="Name" value="dht22setup"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a08d462b8be4267cc68df63a1074ba541"><param name="Name" value="dht"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a40ecda65c4ebce49fa139666f210bef0"><param name="Name" value="event"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a26ba0b0c461ad75f164cd23e9980923b"><param name="Name" value="fanData"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#af3b565e3d5fe36e757790c2d3966addc"><param name="Name" value="fanStatusPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a12b59da3012cde0aab1fa623b4e46c55"><param name="Name" value="fbdo"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a7d13df2c7afc53c16de86a1cffd5b546"><param name="Name" value="humidityPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aee3e281306c7e1909a9c5cd1820de715"><param name="Name" value="initWifi"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aaa2339245ba9a797b664bfe5aa73d062"><param name="Name" value="json"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a9c1132726b6bd52e6df714e1e2d0bdaf"><param name="Name" value="lightData"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a289f8d67e98054f7d91e26a05c4a85ed"><param name="Name" value="lightIntesityThreshhold"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a210f9eb6fb3a980637c1d8d47f5803f2"><param name="Name" value="lightdepentresistorStatusPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8269c4830ed15273e7ef8fab7227f356"><param name="Name" value="lockLow"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#afe461d27b9c48d5921c00d521181f12f"><param name="Name" value="loop"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a187af7b881bea2905b906b75ac61c951"><param name="Name" value="API_KEY"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a7750ff0242cbad0d27af32955ffc558b"><param name="Name" value="DATABASE_URL"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a757bb4e2bff6148de6ef3989b32a0126"><param name="Name" value="DHTPIN"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a2c509dba12bba99883a5be9341b7a0c5"><param name="Name" value="DHTTYPE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a9fa6f083fd9b05ac8a6b94f34322661e"><param name="Name" value="LDR"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#afb8d6cd804180ab822bba5458b9ca7fb"><param name="Name" value="RELAY1"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#ac343cbc35387891c8a113511ea616375"><param name="Name" value="RELAY2"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a38b2cde7b7031bb8ae0b70212ae15742"><param name="Name" value="USER_EMAIL"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a860ee33efc898dd1efb8a3e2fb299f43"><param name="Name" value="USER_PASSWORD"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8c83bc760185689dd4dd65602e2f0cda"><param name="Name" value="WIFI_PASSWORD"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#acfbdc371ef3f82e0319587e6be185631"><param name="Name" value="WIFI_SSID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aecbaea371d434c4a1e67568844435de6"><param name="Name" value="auth"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#adf9e5e8e4c533f3f34b4b5b8a5d05f79"><param name="Name" value="calibrationTime"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a5ad753240216beef4b6f05ce546268e3"><param name="Name" value="config"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a4b1d73b78e41e89be05065a491e03ff9"><param name="Name" value="databasePath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#ad93ea1260e26bb5ac4f8dcf12409fc33"><param name="Name" value="databasePath1"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a2a9fec03258233e351f904b67c9bb1af"><param name="Name" value="delayMS"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a08d462b8be4267cc68df63a1074ba541"><param name="Name" value="dht"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aaa9d06b30645a78cecf7e0ccbf5d1a6a"><param name="Name" value="dht22setup"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a40ecda65c4ebce49fa139666f210bef0"><param name="Name" value="event"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a26ba0b0c461ad75f164cd23e9980923b"><param name="Name" value="fanData"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#af3b565e3d5fe36e757790c2d3966addc"><param name="Name" value="fanStatusPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a12b59da3012cde0aab1fa623b4e46c55"><param name="Name" value="fbdo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a7d13df2c7afc53c16de86a1cffd5b546"><param name="Name" value="humidityPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aee3e281306c7e1909a9c5cd1820de715"><param name="Name" value="initWifi"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aaa2339245ba9a797b664bfe5aa73d062"><param name="Name" value="json"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a9c1132726b6bd52e6df714e1e2d0bdaf"><param name="Name" value="lightData"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a289f8d67e98054f7d91e26a05c4a85ed"><param name="Name" value="lightIntesityThreshhold"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a210f9eb6fb3a980637c1d8d47f5803f2"><param name="Name" value="lightdepentresistorStatusPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8269c4830ed15273e7ef8fab7227f356"><param name="Name" value="lockLow"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#afe461d27b9c48d5921c00d521181f12f"><param name="Name" value="loop"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a13809f03dc9aa4679358d4cd5bc17bb7"><param name="Name" value="lowIn"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a664ba92c58057a675db91da6dbce5e79"><param name="Name" value="manualFan"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#ab40bda415158ffab9a7b8783c4c74c77"><param name="Name" value="manualLight"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aea63e2cf87616372ee3f6ba3dc9ee43d"><param name="Name" value="parentPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a154ee2d5366ced0cbb36e45e594df353"><param name="Name" value="pirPin"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8590996780c7d5c3de6c4a2f2f617405"><param name="Name" value="pirStatusPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#acebd99a8f5ec804b6d8a60ac2954b491"><param name="Name" value="prev_humidity"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8c2a1405f338a3dddbaa36b9c4a12bf3"><param name="Name" value="prev_temp"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a48adddb454189657a876feac66ea6412"><param name="Name" value="result_appliance"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a92d40cef9d6004d7feec4f07de4420b3"><param name="Name" value="roomBulbStatusPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#abc135b3779890cdab26cf991e84e4be8"><param name="Name" value="sendDHT"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a53543dfbdcd28332c01b8964b0a0f9e8"><param name="Name" value="sendDataPrevMillis"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a3820ce32ef380c6fa579581d1d07026e"><param name="Name" value="sensorPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a4fc01d736fe50cf5b977f755b675f11d"><param name="Name" value="setup"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8f6aed8f851caacd884aa92161ea779c"><param name="Name" value="smartFan"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a2d715603da68e8fc7b2401f2ca6acc6c"><param name="Name" value="smartLight"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aabcbcbd69daa75f8aae753cb3d01a0ed"><param name="Name" value="smartLight_setup"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a4aa29eaefe4235b4ceb691ca2c811436"><param name="Name" value="switch1Path"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a9f6651871e6dbadd1a9eaddc34d1cfd5"><param name="Name" value="switch2Path"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8f1dced96ec602c608c86f83bed9ccfb"><param name="Name" value="switch3Path"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a4887ae789a6d8f18019a4a8231f1e967"><param name="Name" value="switch4Path"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#ac7343c1e231f230fbb2b53584153da60"><param name="Name" value="takeLowTime"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a1a490c36c810060635d5674b42f5c694"><param name="Name" value="temperaturePath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#ae830da93d7e59e7c49155706732faaf5"><param name="Name" value="uid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a61f7a09a559c084ff51fb4a033e2c947"><param name="Name" value="updateHumidity"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html"><param name="Name" value="lora_32_firm.ino"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a5f83da20d685a6dbd965afb71fbd50aa"><param name="Name" value="updateTemp"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a13809f03dc9aa4679358d4cd5bc17bb7"><param name="Name" value="lowIn"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a664ba92c58057a675db91da6dbce5e79"><param name="Name" value="manualFan"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#ab40bda415158ffab9a7b8783c4c74c77"><param name="Name" value="manualLight"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aea63e2cf87616372ee3f6ba3dc9ee43d"><param name="Name" value="parentPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a154ee2d5366ced0cbb36e45e594df353"><param name="Name" value="pirPin"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8590996780c7d5c3de6c4a2f2f617405"><param name="Name" value="pirStatusPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#acebd99a8f5ec804b6d8a60ac2954b491"><param name="Name" value="prev_humidity"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8c2a1405f338a3dddbaa36b9c4a12bf3"><param name="Name" value="prev_temp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a48adddb454189657a876feac66ea6412"><param name="Name" value="result_appliance"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a92d40cef9d6004d7feec4f07de4420b3"><param name="Name" value="roomBulbStatusPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#abc135b3779890cdab26cf991e84e4be8"><param name="Name" value="sendDHT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a53543dfbdcd28332c01b8964b0a0f9e8"><param name="Name" value="sendDataPrevMillis"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a3820ce32ef380c6fa579581d1d07026e"><param name="Name" value="sensorPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a4fc01d736fe50cf5b977f755b675f11d"><param name="Name" value="setup"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8f6aed8f851caacd884aa92161ea779c"><param name="Name" value="smartFan"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a2d715603da68e8fc7b2401f2ca6acc6c"><param name="Name" value="smartLight"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#aabcbcbd69daa75f8aae753cb3d01a0ed"><param name="Name" value="smartLight_setup"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a4aa29eaefe4235b4ceb691ca2c811436"><param name="Name" value="switch1Path"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a9f6651871e6dbadd1a9eaddc34d1cfd5"><param name="Name" value="switch2Path"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a8f1dced96ec602c608c86f83bed9ccfb"><param name="Name" value="switch3Path"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a4887ae789a6d8f18019a4a8231f1e967"><param name="Name" value="switch4Path"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#ac7343c1e231f230fbb2b53584153da60"><param name="Name" value="takeLowTime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a1a490c36c810060635d5674b42f5c694"><param name="Name" value="temperaturePath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#ae830da93d7e59e7c49155706732faaf5"><param name="Name" value="uid"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a61f7a09a559c084ff51fb4a033e2c947"><param name="Name" value="updateHumidity"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="lora__32__firm_8ino.html#a5f83da20d685a6dbd965afb71fbd50aa"><param name="Name" value="updateTemp"></OBJECT>
+</UL>
+</BODY>
+</HTML>

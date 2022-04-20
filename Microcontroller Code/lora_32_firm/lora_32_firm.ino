@@ -1,16 +1,17 @@
-/*Smart Home: IOT based Effiecient Household Resource usage Project
- *Using LoRa32 Micro-Controller: an ESP32 with Built in LoRa Capabilities and OLED Display
- * 
- * i.e., Electricity and Water
- * Final Year Project: @University of Malawi
- * Ramsey Njema bsc-com-ne-10-17@unima.ac.mw
- * Haddard Nyirenda bsc-com-ne-10-17@unima.ac.mw
- */
-/*========================================================================================================================================================================================
- * Include Neccessary Libraries
- */
+///variables
+///<*Smart Home: IOT based Effiecient Household Resource usage Project
+///<*Using LoRa32 Micro-Controller: an ESP32 with Built in LoRa Capabilities and OLED Display
+///* 
+ ///<* i.e., Electricity and Water
+ ///<* Final Year Project: @University of Malawi
+ ///<* Ramsey Njema bsc-com-ne-10-17@unima.ac.mw
+ ///<* Haddard Nyirenda bsc-com-ne-10-17@unima.ac.mw
+ ///<*/
+////<*========================================================================================================================================================================================
+ ///<* Include Neccessary Libraries
+ ///<*/
 
-// Wifi
+
 char *WIFI_SSID;
 char *WIFI_PASSWORD; 
 #if defined(ESP32)
@@ -21,35 +22,32 @@ char *WIFI_PASSWORD;
 #include <FirebaseESP8266.h>
 #endif
 
-//Bluetooth Serial
-
-// DHT
+///DHT
 #include <Adafruit_Sensor.h>
+/// DHT
 #include <DHT.h>
 #include <DHT_U.h>
-#define RELAY1 22 //switch for fan
-#define RELAY2 13 //switch for light
-//#define RELAY3 38
-//#define RELAY4 38
+#define RELAY1 22 ///switch for fan
+#define RELAY2 13 ///switch for light
 #define DHTPIN 17 
 #define pirPin 21  
 #define LDR 36
 #define DHTTYPE DHT22
 DHT_Unified dht(DHTPIN, DHTTYPE);
 
-//Firebase Necesities
-//Provide the token generation process info.
+////Firebase Necesities
+///Provide the token generation process info.
 #include <addons/TokenHelper.h>
-//Provide the RTDB payload printing info and other helper functions.
+///Provide the RTDB payload printing info and other helper functions.
 #include <addons/RTDBHelper.h>
 
-/*=========================================================================================================================================================================================
- * Fixed Variable declaration
- */
+///*=========================================================================================================================================================================================
+/// * Fixed Variable declaration
+/// */
  
-//For the following credentials, see examples/Authentications/SignInAsUser/EmailPassword/EmailPassword.ino
+///For the following credentials, see examples/Authentications/SignInAsUser/EmailPassword/EmailPassword.ino
 /* 2. Define the API Key */
-#define API_KEY "AIzaSyCocqUsUnVBTJ40_I1BOoNamgNpSQTnDnM"
+#define API_KEY ""
 /* 3. Define the RTDB URL */
 #define DATABASE_URL "https://shautom-app-test-default-rtdb.asia-southeast1.firebasedatabase.app" //<databaseName>.firebaseio.com or <databaseName>.<region>.firebasedatabase.app
 /* 4. Define the user Email and password that alreadey registerd or added in your project */
@@ -57,7 +55,7 @@ char *USER_EMAIL;
 char *USER_PASSWORD;
 
 /*=========================================================================================================================================================================================
- * Variable Declration and intiation
+ * Variable Declration and instatiation
  */
 //Define Firebase objects
 FirebaseJson json;
@@ -98,6 +96,9 @@ String uid = "2vtcqvRNBVUPi0XtnxbUJRAy9GE2";
 //the time we give the sensor to calibrate (10-60 secs according to the datasheet)
 int calibrationTime = 30;        
 
+//DHT events
+sensors_event_t event;
+
 //the time when the sensor outputs a low impulse
 long unsigned int lowIn;         
 
@@ -115,51 +116,7 @@ int lightIntesityThreshhold = 700;
  *  
  */
 
-  
-    //Global function that handles stream data
-  void streamCallbackFn(StreamData data){
-  
-    //Print out all information
-  
-    Serial.println("Stream Data...");
-    Serial.println(data.streamPath());
-    Serial.println(data.dataPath());
-    Serial.println(data.dataType());
-  
-    //Print out the value
-    //Stream data can be many types which can be determined from function dataType
-  
-    if (data.dataTypeEnum() == fb_esp_rtdb_data_type_integer)
-        {Serial.println(data.to<int>());}
-    else if (data.dataTypeEnum() == fb_esp_rtdb_data_type_float)
-        {Serial.println(data.to<float>(), 5);}
-    else if (data.dataTypeEnum() == fb_esp_rtdb_data_type_double)
-        {printf("%.9lf\n", data.to<double>());}
-    else if (data.dataTypeEnum() == fb_esp_rtdb_data_type_boolean)
-        {Serial.println(data.to<bool>()? "true" : "false");}
-    else if (data.dataTypeEnum() == fb_esp_rtdb_data_type_string)
-        {Serial.println(data.to<String>());}
-    else if (data.dataTypeEnum() == fb_esp_rtdb_data_type_json)
-    {
-        FirebaseJson *json1 = data.to<FirebaseJson *>();
-        Serial.println(json1->raw());
-    }
-    else if (data.dataTypeEnum() == fb_esp_rtdb_data_type_array)
-    {
-        FirebaseJsonArray *arr = data.to<FirebaseJsonArray *>();
-        Serial.println(arr->raw());
-    }
-  }
-  
-  //Global function that notifies when stream connection lost
-  //The library will resume the stream connection automatically
-  void streamTimeoutCallback(bool timeout){
-    if(timeout){
-      //Stream timeout occurred
-      Serial.println("Stream timeout, resume streaming...");
-    }  
-  }
- 
+
  
 //main setup
 void setup() {
@@ -182,16 +139,7 @@ void setup() {
   lightdepentresistorStatusPath = sensorPath + "/LightSensor/ldr-status";
   temperaturePath = sensorPath + "/DHT22/temperature";
   humidityPath = sensorPath + "/DHT22/humidity";
-  parentPath = databasePath + uid;
-
-  Firebase.RTDB.setStreamCallback(&fbdo, &streamCallbackFn, &streamTimeoutCallback);
-
-//In setup(), set the streaming path to "/test/data" and begin stream connection
-
-  if (!Firebase.RTDB.beginStream(&fbdo, parentPath + "/appliance_control/switch1/state")){
-    //Could not begin stream connection, then print out the error detail
-    Serial.println(fbdo.errorReason());}
-  
+  parentPath = databasePath + uid; 
    
 }
 
@@ -202,12 +150,13 @@ if (Firebase.ready() && (millis() - sendDataPrevMillis > delayMS || sendDataPrev
  
     
     delay(delayMS);
-    smartLight();
-    smartFan();
-    Serial.printf("Set json... %s\n", Firebase.RTDB.updateNode(&fbdo, parentPath.c_str(), &json) ? "ok" : fbdo.errorReason().c_str());
-    delay(3000);
+    //smartLight();
+    //smartFan();
+    
     manualLight();
+    sendDHT();
     manualFan();
+    Serial.printf("Set json... %s\n", Firebase.RTDB.updateNode(&fbdo, parentPath.c_str(), &json) ? "ok" : fbdo.errorReason().c_str());
     
   }
 }
@@ -217,9 +166,6 @@ if (Firebase.ready() && (millis() - sendDataPrevMillis > delayMS || sendDataPrev
 --Functions that will run one time
 --Probably intializing the sensors
 */
-void getSwitchState(){
-  
-  }
   
 
 //Get the user id of the person signing in
@@ -264,7 +210,9 @@ void initWifi(){
   Serial.println();
   delay(calibrationTime);
 
-  
+  /* 
+  --WiFi and Email credentials
+  */
   WIFI_SSID = "Ramsey's MiFi";
   WIFI_PASSWORD = "Chimphepo";
 
@@ -272,11 +220,6 @@ void initWifi(){
   USER_EMAIL = "bsc-com-ne-10-17@unima.ac.mw";
   USER_PASSWORD = "12345678";
 
-  
-
-  
-  //Serial.readBytesUntil(10, WIFI_PASSWORD, 50);
-  //Serial.print(WIFI_PASSWORD);
   Serial.println("PASSWORD RECEIVED");
   Serial.println();
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
@@ -314,113 +257,9 @@ void initWifi(){
   Firebase.reconnectWiFi(true);
 }
 
-void temperature(){
-    
-}
-void humidity(){
-    sensors_event_t event;
 
-}
-//SMARTLIGHT SETUP
-void smartLight_setup(){
-  //pinMode(RELAY3, OUTPUT);
-  pinMode(pirPin, INPUT);
-  pinMode(LDR, INPUT);
-  
-  //give the sensor some time to calibrate
-  Serial.print("calibrating sensor ");
-    for(int i = 0; i < calibrationTime; i++){
-      Serial.print(".");
-      delay(1000);
-      }
-    Serial.println(" done");
-    Serial.println("SENSOR ACTIVE");
-    delay(50);
- }
 
-void manualLight(){
-if (Firebase.getInt(lightData, (parentPath + "/" + roomBulbStatusPath))) {
-
-      if (lightData.dataTypeEnum() == fb_esp_rtdb_data_type_integer) {
-        Serial.print("Light state: ");
-      Serial.println(lightData.to<int>());
-      if(lightData.to<int>() == 1){
-          digitalWrite(RELAY1, HIGH);
-          delay(5000);
-        }}  
-      else {
-        Serial.println(lightData.errorReason());
-      }
-    }  
-}
-
-void smartLight(){
-long unsigned int pause = 5000;
-Serial.println("Light Intensity: ");
-Serial.println(analogRead(LDR));       
-    if((digitalRead(pirPin) == HIGH) && (analogRead(LDR)<= lightIntesityThreshhold)){
-     digitalWrite(RELAY2, HIGH);
-     json.add(lightdepentresistorStatusPath.c_str(),String(analogRead(LDR)));
-     json.add(pirStatusPath.c_str(), 1);
-     json.add(switch2Path.c_str(), 1);
-     json.add(roomBulbStatusPath.c_str(), 1);
-        
-//     delay(pause);
-//     
-//     if(lockLow){  
-//       //makes sure we wait for a transition to LOW before any further output is made:
-//       lockLow = false;            
-//       Serial.println("---");
-//       Serial.print("motion detected at ");
-//       Serial.print(millis()/1000);
-//       Serial.println(" sec"); 
-//       delay(50);
-//       }         
-//       takeLowTime = true;
-     }
-   else { 
-    manualLight();
-     digitalWrite(RELAY2, LOW);
-     json.add(lightdepentresistorStatusPath.c_str(),String(analogRead(LDR)));
-     json.add(pirStatusPath.c_str(), 0);
-     json.add(switch2Path.c_str(), 0);
-     json.add(roomBulbStatusPath.c_str(), 0);
-     
-//     if(takeLowTime){
-//      lowIn = millis();          //save the time of the transition from high to LOW
-//      takeLowTime = false;       //make sure this is only done at the start of a LOW phase
-//      }
-//     //if the sensor is low for more than the given pause, 
-//     //we assume that no more motion is going to happen
-//     if(!lockLow && millis() - lowIn > pause){  
-//         //makes sure this block of code is only executed again after 
-//         //a new motion sequence has been detected
-//         lockLow = true;                        
-//         Serial.print("motion ended at ");      //output
-//         Serial.print((millis() - pause)/1000);
-//         Serial.println(" sec");
-         delay(50);
-         }
-}
-
-void manualFan(){
-if (Firebase.getInt(fanData, (parentPath + "/" + fanStatusPath))) {
-
-      if (fanData.dataTypeEnum() == fb_esp_rtdb_data_type_integer) {
-        Serial.print("Fan state: ");
-      Serial.println(fanData.to<int>());
-      if(fanData.to<int>() == 1){
-          digitalWrite(RELAY2, HIGH);
-          delay(5000);
-        }}  
-      else {
-        Serial.println(fanData.errorReason());
-      }
-    }  
-}
- 
-void smartFan(){
-  sensors_event_t event;
+void sendDHT(){
   dht.temperature().getEvent(&event);
   if (isnan(event.temperature)) {
     Serial.println(F("Error reading temperature!"));
@@ -445,19 +284,111 @@ void smartFan(){
     json.add(humidityPath.c_str(), float(event.relative_humidity));
     updateHumidity(event.relative_humidity);
   }
+}
 
+//SMARTLIGHT SETUP
+void smartLight_setup(){
+  //pinMode(RELAY3, OUTPUT);
+  pinMode(pirPin, INPUT);
+  pinMode(LDR, INPUT);
   
-  
-  if(event.temperature > 27 || event.relative_humidity > 50){
-    digitalWrite(RELAY1, HIGH);
-    json.add(switch1Path.c_str(), 1);
-    json.add(fanStatusPath.c_str(), 1);
-    
-  }
-  else{
-    manualFan();
-    digitalWrite(RELAY1, LOW);
-    json.add(switch1Path.c_str(), 0);
-    json.add(fanStatusPath.c_str(), 0);
-    }
-  }
+  //give the sensor some time to calibrate, this is the passive infrared sensor.
+  Serial.print("calibrating sensor ");
+    for(int i = 0; i < calibrationTime; i++){
+      Serial.print(".");
+      delay(1000);
+      }
+    Serial.println(" done");
+    Serial.println("SENSOR ACTIVE");
+    delay(50);
+ }
+
+
+/*
+This portion lets the user to be to control the light manually
+*/
+
+void manualLight(){
+  FirebaseData ld;
+if (Firebase.getInt(lightData, (parentPath + "/" + switch2Path))) {
+      if (lightData.dataTypeEnum() == fb_esp_rtdb_data_type_integer){
+        Serial.print("Light state: ");
+      Serial.println(lightData.to<int>());
+         int lightState = lightData.to<int>();
+         smartLight(lightState);
+    }  
+}
+else {
+        //digitalWrite(RELAY2, LOW);
+        Serial.println(lightData.errorReason());
+      }
+
+}
+/*
+The motion sensor (passive infrared sensor) by reading radiation in form of heat produced by animaic things (humans, animals).
+The light dependent resistor works by reading analog values from 0-1023, if values fall 700 its night time.
+combining these sensors we create a smart light controller that turns lights on if its dark only in a presence of animaic being (i.e., man)
+*
+then updates the data base on the state of ldr, pir and bulb
+*/
+void smartLight(int val){
+long unsigned int pause = 5000;
+Serial.println("Light Intensity: ");
+Serial.println(analogRead(LDR));    
+Serial.printf("%d",digitalRead(pirPin));
+    if(val == 1){   
+      if(analogRead(LDR)<= lightIntesityThreshhold){
+        digitalWrite(RELAY2, HIGH);
+        json.add(lightdepentresistorStatusPath.c_str(),String(analogRead(LDR)));
+        json.add(pirStatusPath.c_str(), 1);
+        //json.add(switch2Path.c_str(), 1);
+        json.add(roomBulbStatusPath.c_str(), 1);
+       }
+      else { 
+        json.add(lightdepentresistorStatusPath.c_str(),String(analogRead(LDR)));
+        json.add(pirStatusPath.c_str(), 0);
+        //json.add(switch2Path.c_str(), 0);
+        json.add(roomBulbStatusPath.c_str(), 0);
+         }
+    }else{
+      digitalWrite(RELAY2, LOW);
+      json.add(roomBulbStatusPath.c_str(), 0);
+      }
+}
+
+/*
+Fan should automatically turn on or off. For humidity above 50 % or temperature greater than 27 turn on since a person is comfortable when
+the temperature is not more above 25% and presence of water vapor is no more that 50%. *
+*/
+
+void smartFan(int val){
+        if(val == 1){
+          if(event.temperature > 25 || event.relative_humidity > 50){
+            digitalWrite(RELAY1, HIGH);
+            json.add(fanStatusPath.c_str(), 1);
+          }else{
+            //digitalWrite(RELAY1, LOW);
+            json.add(fanStatusPath.c_str(), 0);
+         }
+       }else{
+        digitalWrite(RELAY1, LOW);
+        }         
+}
+
+/*
+
+The Manual part of the fan is like switching on or off the main circuit and then being able to manually control the fan in absence of the automatic
+mechanism.
+
+*/
+void manualFan(){
+    if (Firebase.getInt(fanData, (parentPath + "/" + switch1Path).c_str())) {
+      if (fanData.dataTypeEnum() == fb_esp_rtdb_data_type_integer){
+        Serial.print("Fan state: ");
+        Serial.println(fanData.to<int>());
+           int powerState = fanData.to<int>();
+          smartFan(powerState);
+    } 
+    }else {
+        Serial.println(fanData.errorReason());}
+}

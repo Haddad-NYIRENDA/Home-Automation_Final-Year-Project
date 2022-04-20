@@ -1,0 +1,483 @@
+\doxysection{C\+:/\+Users/\+Hadad NYIRENDA/\+Desktop/\+Work/\+Home-\/\+Automation\+\_\+\+Final-\/\+Year-\/\+Project/\+Microcontroller Code/lora\+\_\+32\+\_\+firm/lora\+\_\+32\+\_\+firm.ino File Reference}
+\label{lora__32__firm_8ino}\index{C:/Users/Hadad NYIRENDA/Desktop/Work/Home-\/Automation\_Final-\/Year-\/Project/Microcontroller Code/lora\_32\_firm/lora\_32\_firm.ino@{C:/Users/Hadad NYIRENDA/Desktop/Work/Home-\/Automation\_Final-\/Year-\/Project/Microcontroller Code/lora\_32\_firm/lora\_32\_firm.ino}}
+{\ttfamily \#include $<$Adafruit\+\_\+\+Sensor.\+h$>$}\newline
+{\ttfamily \#include $<$DHT.\+h$>$}\newline
+{\ttfamily \#include $<$DHT\+\_\+\+U.\+h$>$}\newline
+{\ttfamily \#include $<$addons/\+Token\+Helper.\+h$>$}\newline
+{\ttfamily \#include $<$addons/\+RTDBHelper.\+h$>$}\newline
+Include dependency graph for lora\+\_\+32\+\_\+firm.\+ino\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ RELAY1}~22
+\item 
+\#define \textbf{ RELAY2}~13
+\item 
+\#define \textbf{ DHTPIN}~17
+\item 
+\#define \textbf{ pir\+Pin}~21
+\item 
+\#define \textbf{ LDR}~36
+\item 
+\#define \textbf{ DHTTYPE}~DHT22
+\item 
+\#define \textbf{ API\+\_\+\+KEY}~\char`\"{}AIza\+Sy\+Cocq\+Us\+Un\+VBTJ40\+\_\+\+I1\+BOo\+Namg\+Np\+SQTn\+DnM\char`\"{}
+\item 
+\#define \textbf{ DATABASE\+\_\+\+URL}~\char`\"{}https\+://shautom-\/app-\/test-\/default-\/rtdb.\+asia-\/southeast1.\+firebasedatabase.\+app\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+DHT\+\_\+\+Unified \textbf{ dht} (\textbf{ DHTPIN}, \textbf{ DHTTYPE})
+\item 
+void \textbf{ setup} ()
+\item 
+void \textbf{ loop} ()
+\item 
+void \textbf{ update\+Temp} (float temp)
+\item 
+void \textbf{ update\+Humidity} (float humidity)
+\item 
+void \textbf{ dht22setup} ()
+\item 
+void \textbf{ init\+Wifi} ()
+\item 
+void \textbf{ send\+DHT} ()
+\item 
+void \textbf{ smart\+Light\+\_\+setup} ()
+\item 
+void \textbf{ manual\+Light} ()
+\item 
+void \textbf{ smart\+Light} (int val)
+\item 
+void \textbf{ smart\+Fan} (int val)
+\item 
+void \textbf{ manual\+Fan} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \textbf{ WIFI\+\_\+\+SSID}
+\item 
+char $\ast$ \textbf{ WIFI\+\_\+\+PASSWORD}
+\item 
+char $\ast$ \textbf{ USER\+\_\+\+EMAIL}
+\item 
+char $\ast$ \textbf{ USER\+\_\+\+PASSWORD}
+\item 
+Firebase\+Json \textbf{ json}
+\item 
+Firebase\+Json \textbf{ result\+\_\+appliance}
+\item 
+Firebase\+Data \textbf{ fbdo}
+\item 
+Firebase\+Auth \textbf{ auth}
+\item 
+Firebase\+Config \textbf{ config}
+\item 
+Firebase\+Data \textbf{ light\+Data}
+\item 
+Firebase\+Data \textbf{ fan\+Data}
+\item 
+String \textbf{ parent\+Path}
+\item 
+String \textbf{ database\+Path}
+\item 
+String \textbf{ database\+Path1}
+\item 
+String \textbf{ temperature\+Path}
+\item 
+String \textbf{ humidity\+Path}
+\item 
+String \textbf{ pir\+Status\+Path}
+\item 
+String \textbf{ lightdepentresistor\+Status\+Path}
+\item 
+String \textbf{ sensor\+Path} = \char`\"{}sensor\+\_\+readings\char`\"{}
+\item 
+String \textbf{ room\+Bulb\+Status\+Path} = \char`\"{}appliance\+\_\+status/roombulb/state\char`\"{}
+\item 
+String \textbf{ fan\+Status\+Path} = \char`\"{}appliance\+\_\+status/fan/state\char`\"{}
+\item 
+String \textbf{ switch1\+Path} = \char`\"{}appliance\+\_\+control/switch1/state\char`\"{}
+\item 
+String \textbf{ switch2\+Path} = \char`\"{}appliance\+\_\+control/switch2/state\char`\"{}
+\item 
+String \textbf{ switch3\+Path} = \char`\"{}appliance\+\_\+control/switch3/state\char`\"{}
+\item 
+String \textbf{ switch4\+Path} = \char`\"{}appliance\+\_\+control/switch4/state\char`\"{}
+\item 
+unsigned long \textbf{ send\+Data\+Prev\+Millis} = 0
+\item 
+uint32\+\_\+t \textbf{ delay\+MS}
+\item 
+float \textbf{ prev\+\_\+temp}
+\item 
+float \textbf{ prev\+\_\+humidity}
+\item 
+String \textbf{ uid} = \char`\"{}2vtcqv\+RNBVUPi0\+Xtnxb\+UJRAy9\+GE2\char`\"{}
+\item 
+int \textbf{ calibration\+Time} = 30
+\item 
+sensors\+\_\+event\+\_\+t \textbf{ event}
+\item 
+long unsigned int \textbf{ low\+In}
+\item 
+boolean \textbf{ lock\+Low} = true
+\item 
+boolean \textbf{ take\+Low\+Time}
+\item 
+int \textbf{ light\+Intesity\+Threshhold} = 700
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{lora__32__firm_8ino_a187af7b881bea2905b906b75ac61c951}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!API\_KEY@{API\_KEY}}
+\index{API\_KEY@{API\_KEY}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{API\_KEY}
+{\footnotesize\ttfamily \#define API\+\_\+\+KEY~\char`\"{}AIza\+Sy\+Cocq\+Us\+Un\+VBTJ40\+\_\+\+I1\+BOo\+Namg\+Np\+SQTn\+DnM\char`\"{}}
+
+\mbox{\label{lora__32__firm_8ino_a7750ff0242cbad0d27af32955ffc558b}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!DATABASE\_URL@{DATABASE\_URL}}
+\index{DATABASE\_URL@{DATABASE\_URL}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{DATABASE\_URL}
+{\footnotesize\ttfamily \#define DATABASE\+\_\+\+URL~\char`\"{}https\+://shautom-\/app-\/test-\/default-\/rtdb.\+asia-\/southeast1.\+firebasedatabase.\+app\char`\"{}}
+
+\mbox{\label{lora__32__firm_8ino_a757bb4e2bff6148de6ef3989b32a0126}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!DHTPIN@{DHTPIN}}
+\index{DHTPIN@{DHTPIN}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{DHTPIN}
+{\footnotesize\ttfamily \#define DHTPIN~17}
+
+\mbox{\label{lora__32__firm_8ino_a2c509dba12bba99883a5be9341b7a0c5}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!DHTTYPE@{DHTTYPE}}
+\index{DHTTYPE@{DHTTYPE}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{DHTTYPE}
+{\footnotesize\ttfamily \#define DHTTYPE~DHT22}
+
+\mbox{\label{lora__32__firm_8ino_a9fa6f083fd9b05ac8a6b94f34322661e}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!LDR@{LDR}}
+\index{LDR@{LDR}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{LDR}
+{\footnotesize\ttfamily \#define LDR~36}
+
+\mbox{\label{lora__32__firm_8ino_a154ee2d5366ced0cbb36e45e594df353}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!pirPin@{pirPin}}
+\index{pirPin@{pirPin}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{pirPin}
+{\footnotesize\ttfamily \#define pir\+Pin~21}
+
+\mbox{\label{lora__32__firm_8ino_afb8d6cd804180ab822bba5458b9ca7fb}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!RELAY1@{RELAY1}}
+\index{RELAY1@{RELAY1}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{RELAY1}
+{\footnotesize\ttfamily \#define RELAY1~22}
+
+\mbox{\label{lora__32__firm_8ino_ac343cbc35387891c8a113511ea616375}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!RELAY2@{RELAY2}}
+\index{RELAY2@{RELAY2}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{RELAY2}
+{\footnotesize\ttfamily \#define RELAY2~13}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{lora__32__firm_8ino_a08d462b8be4267cc68df63a1074ba541}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!dht@{dht}}
+\index{dht@{dht}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{dht()}
+{\footnotesize\ttfamily DHT\+\_\+\+Unified dht (\begin{DoxyParamCaption}\item[{\textbf{ DHTPIN}}]{,  }\item[{\textbf{ DHTTYPE}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_aaa9d06b30645a78cecf7e0ccbf5d1a6a}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!dht22setup@{dht22setup}}
+\index{dht22setup@{dht22setup}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{dht22setup()}
+{\footnotesize\ttfamily void dht22setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_aee3e281306c7e1909a9c5cd1820de715}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!initWifi@{initWifi}}
+\index{initWifi@{initWifi}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{initWifi()}
+{\footnotesize\ttfamily void init\+Wifi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_afe461d27b9c48d5921c00d521181f12f}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!loop@{loop}}
+\index{loop@{loop}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{loop()}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_a664ba92c58057a675db91da6dbce5e79}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!manualFan@{manualFan}}
+\index{manualFan@{manualFan}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{manualFan()}
+{\footnotesize\ttfamily void manual\+Fan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_ab40bda415158ffab9a7b8783c4c74c77}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!manualLight@{manualLight}}
+\index{manualLight@{manualLight}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{manualLight()}
+{\footnotesize\ttfamily void manual\+Light (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_abc135b3779890cdab26cf991e84e4be8}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!sendDHT@{sendDHT}}
+\index{sendDHT@{sendDHT}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{sendDHT()}
+{\footnotesize\ttfamily void send\+DHT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!setup@{setup}}
+\index{setup@{setup}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{setup()}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_a8f6aed8f851caacd884aa92161ea779c}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!smartFan@{smartFan}}
+\index{smartFan@{smartFan}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{smartFan()}
+{\footnotesize\ttfamily void smart\+Fan (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_a2d715603da68e8fc7b2401f2ca6acc6c}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!smartLight@{smartLight}}
+\index{smartLight@{smartLight}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{smartLight()}
+{\footnotesize\ttfamily void smart\+Light (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_aabcbcbd69daa75f8aae753cb3d01a0ed}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!smartLight\_setup@{smartLight\_setup}}
+\index{smartLight\_setup@{smartLight\_setup}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{smartLight\_setup()}
+{\footnotesize\ttfamily void smart\+Light\+\_\+setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_a61f7a09a559c084ff51fb4a033e2c947}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!updateHumidity@{updateHumidity}}
+\index{updateHumidity@{updateHumidity}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{updateHumidity()}
+{\footnotesize\ttfamily void update\+Humidity (\begin{DoxyParamCaption}\item[{float}]{humidity }\end{DoxyParamCaption})}
+
+\mbox{\label{lora__32__firm_8ino_a5f83da20d685a6dbd965afb71fbd50aa}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!updateTemp@{updateTemp}}
+\index{updateTemp@{updateTemp}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{updateTemp()}
+{\footnotesize\ttfamily void update\+Temp (\begin{DoxyParamCaption}\item[{float}]{temp }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{lora__32__firm_8ino_aecbaea371d434c4a1e67568844435de6}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!auth@{auth}}
+\index{auth@{auth}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{auth}
+{\footnotesize\ttfamily Firebase\+Auth auth}
+
+\mbox{\label{lora__32__firm_8ino_adf9e5e8e4c533f3f34b4b5b8a5d05f79}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!calibrationTime@{calibrationTime}}
+\index{calibrationTime@{calibrationTime}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{calibrationTime}
+{\footnotesize\ttfamily int calibration\+Time = 30}
+
+\mbox{\label{lora__32__firm_8ino_a5ad753240216beef4b6f05ce546268e3}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!config@{config}}
+\index{config@{config}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{config}
+{\footnotesize\ttfamily Firebase\+Config config}
+
+\mbox{\label{lora__32__firm_8ino_a4b1d73b78e41e89be05065a491e03ff9}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!databasePath@{databasePath}}
+\index{databasePath@{databasePath}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{databasePath}
+{\footnotesize\ttfamily String database\+Path}
+
+\mbox{\label{lora__32__firm_8ino_ad93ea1260e26bb5ac4f8dcf12409fc33}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!databasePath1@{databasePath1}}
+\index{databasePath1@{databasePath1}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{databasePath1}
+{\footnotesize\ttfamily String database\+Path1}
+
+\mbox{\label{lora__32__firm_8ino_a2a9fec03258233e351f904b67c9bb1af}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!delayMS@{delayMS}}
+\index{delayMS@{delayMS}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{delayMS}
+{\footnotesize\ttfamily uint32\+\_\+t delay\+MS}
+
+\mbox{\label{lora__32__firm_8ino_a40ecda65c4ebce49fa139666f210bef0}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!event@{event}}
+\index{event@{event}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{event}
+{\footnotesize\ttfamily sensors\+\_\+event\+\_\+t event}
+
+\mbox{\label{lora__32__firm_8ino_a26ba0b0c461ad75f164cd23e9980923b}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!fanData@{fanData}}
+\index{fanData@{fanData}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{fanData}
+{\footnotesize\ttfamily Firebase\+Data fan\+Data}
+
+\mbox{\label{lora__32__firm_8ino_af3b565e3d5fe36e757790c2d3966addc}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!fanStatusPath@{fanStatusPath}}
+\index{fanStatusPath@{fanStatusPath}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{fanStatusPath}
+{\footnotesize\ttfamily String fan\+Status\+Path = \char`\"{}appliance\+\_\+status/fan/state\char`\"{}}
+
+\mbox{\label{lora__32__firm_8ino_a12b59da3012cde0aab1fa623b4e46c55}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!fbdo@{fbdo}}
+\index{fbdo@{fbdo}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{fbdo}
+{\footnotesize\ttfamily Firebase\+Data fbdo}
+
+\mbox{\label{lora__32__firm_8ino_a7d13df2c7afc53c16de86a1cffd5b546}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!humidityPath@{humidityPath}}
+\index{humidityPath@{humidityPath}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{humidityPath}
+{\footnotesize\ttfamily String humidity\+Path}
+
+\mbox{\label{lora__32__firm_8ino_aaa2339245ba9a797b664bfe5aa73d062}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!json@{json}}
+\index{json@{json}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{json}
+{\footnotesize\ttfamily Firebase\+Json json}
+
+\mbox{\label{lora__32__firm_8ino_a9c1132726b6bd52e6df714e1e2d0bdaf}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!lightData@{lightData}}
+\index{lightData@{lightData}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{lightData}
+{\footnotesize\ttfamily Firebase\+Data light\+Data}
+
+\mbox{\label{lora__32__firm_8ino_a210f9eb6fb3a980637c1d8d47f5803f2}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!lightdepentresistorStatusPath@{lightdepentresistorStatusPath}}
+\index{lightdepentresistorStatusPath@{lightdepentresistorStatusPath}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{lightdepentresistorStatusPath}
+{\footnotesize\ttfamily String lightdepentresistor\+Status\+Path}
+
+\mbox{\label{lora__32__firm_8ino_a289f8d67e98054f7d91e26a05c4a85ed}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!lightIntesityThreshhold@{lightIntesityThreshhold}}
+\index{lightIntesityThreshhold@{lightIntesityThreshhold}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{lightIntesityThreshhold}
+{\footnotesize\ttfamily int light\+Intesity\+Threshhold = 700}
+
+\mbox{\label{lora__32__firm_8ino_a8269c4830ed15273e7ef8fab7227f356}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!lockLow@{lockLow}}
+\index{lockLow@{lockLow}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{lockLow}
+{\footnotesize\ttfamily boolean lock\+Low = true}
+
+\mbox{\label{lora__32__firm_8ino_a13809f03dc9aa4679358d4cd5bc17bb7}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!lowIn@{lowIn}}
+\index{lowIn@{lowIn}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{lowIn}
+{\footnotesize\ttfamily long unsigned int low\+In}
+
+\mbox{\label{lora__32__firm_8ino_aea63e2cf87616372ee3f6ba3dc9ee43d}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!parentPath@{parentPath}}
+\index{parentPath@{parentPath}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{parentPath}
+{\footnotesize\ttfamily String parent\+Path}
+
+\mbox{\label{lora__32__firm_8ino_a8590996780c7d5c3de6c4a2f2f617405}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!pirStatusPath@{pirStatusPath}}
+\index{pirStatusPath@{pirStatusPath}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{pirStatusPath}
+{\footnotesize\ttfamily String pir\+Status\+Path}
+
+\mbox{\label{lora__32__firm_8ino_acebd99a8f5ec804b6d8a60ac2954b491}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!prev\_humidity@{prev\_humidity}}
+\index{prev\_humidity@{prev\_humidity}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{prev\_humidity}
+{\footnotesize\ttfamily float prev\+\_\+humidity}
+
+\mbox{\label{lora__32__firm_8ino_a8c2a1405f338a3dddbaa36b9c4a12bf3}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!prev\_temp@{prev\_temp}}
+\index{prev\_temp@{prev\_temp}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{prev\_temp}
+{\footnotesize\ttfamily float prev\+\_\+temp}
+
+\mbox{\label{lora__32__firm_8ino_a48adddb454189657a876feac66ea6412}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!result\_appliance@{result\_appliance}}
+\index{result\_appliance@{result\_appliance}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{result\_appliance}
+{\footnotesize\ttfamily Firebase\+Json result\+\_\+appliance}
+
+\mbox{\label{lora__32__firm_8ino_a92d40cef9d6004d7feec4f07de4420b3}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!roomBulbStatusPath@{roomBulbStatusPath}}
+\index{roomBulbStatusPath@{roomBulbStatusPath}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{roomBulbStatusPath}
+{\footnotesize\ttfamily String room\+Bulb\+Status\+Path = \char`\"{}appliance\+\_\+status/roombulb/state\char`\"{}}
+
+\mbox{\label{lora__32__firm_8ino_a53543dfbdcd28332c01b8964b0a0f9e8}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!sendDataPrevMillis@{sendDataPrevMillis}}
+\index{sendDataPrevMillis@{sendDataPrevMillis}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{sendDataPrevMillis}
+{\footnotesize\ttfamily unsigned long send\+Data\+Prev\+Millis = 0}
+
+\mbox{\label{lora__32__firm_8ino_a3820ce32ef380c6fa579581d1d07026e}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!sensorPath@{sensorPath}}
+\index{sensorPath@{sensorPath}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{sensorPath}
+{\footnotesize\ttfamily String sensor\+Path = \char`\"{}sensor\+\_\+readings\char`\"{}}
+
+\mbox{\label{lora__32__firm_8ino_a4aa29eaefe4235b4ceb691ca2c811436}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!switch1Path@{switch1Path}}
+\index{switch1Path@{switch1Path}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{switch1Path}
+{\footnotesize\ttfamily String switch1\+Path = \char`\"{}appliance\+\_\+control/switch1/state\char`\"{}}
+
+\mbox{\label{lora__32__firm_8ino_a9f6651871e6dbadd1a9eaddc34d1cfd5}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!switch2Path@{switch2Path}}
+\index{switch2Path@{switch2Path}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{switch2Path}
+{\footnotesize\ttfamily String switch2\+Path = \char`\"{}appliance\+\_\+control/switch2/state\char`\"{}}
+
+\mbox{\label{lora__32__firm_8ino_a8f1dced96ec602c608c86f83bed9ccfb}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!switch3Path@{switch3Path}}
+\index{switch3Path@{switch3Path}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{switch3Path}
+{\footnotesize\ttfamily String switch3\+Path = \char`\"{}appliance\+\_\+control/switch3/state\char`\"{}}
+
+\mbox{\label{lora__32__firm_8ino_a4887ae789a6d8f18019a4a8231f1e967}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!switch4Path@{switch4Path}}
+\index{switch4Path@{switch4Path}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{switch4Path}
+{\footnotesize\ttfamily String switch4\+Path = \char`\"{}appliance\+\_\+control/switch4/state\char`\"{}}
+
+\mbox{\label{lora__32__firm_8ino_ac7343c1e231f230fbb2b53584153da60}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!takeLowTime@{takeLowTime}}
+\index{takeLowTime@{takeLowTime}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{takeLowTime}
+{\footnotesize\ttfamily boolean take\+Low\+Time}
+
+\mbox{\label{lora__32__firm_8ino_a1a490c36c810060635d5674b42f5c694}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!temperaturePath@{temperaturePath}}
+\index{temperaturePath@{temperaturePath}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{temperaturePath}
+{\footnotesize\ttfamily String temperature\+Path}
+
+\mbox{\label{lora__32__firm_8ino_ae830da93d7e59e7c49155706732faaf5}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!uid@{uid}}
+\index{uid@{uid}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{uid}
+{\footnotesize\ttfamily String uid = \char`\"{}2vtcqv\+RNBVUPi0\+Xtnxb\+UJRAy9\+GE2\char`\"{}}
+
+\mbox{\label{lora__32__firm_8ino_a38b2cde7b7031bb8ae0b70212ae15742}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!USER\_EMAIL@{USER\_EMAIL}}
+\index{USER\_EMAIL@{USER\_EMAIL}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{USER\_EMAIL}
+{\footnotesize\ttfamily char$\ast$ USER\+\_\+\+EMAIL}
+
+\mbox{\label{lora__32__firm_8ino_a860ee33efc898dd1efb8a3e2fb299f43}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!USER\_PASSWORD@{USER\_PASSWORD}}
+\index{USER\_PASSWORD@{USER\_PASSWORD}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{USER\_PASSWORD}
+{\footnotesize\ttfamily char$\ast$ USER\+\_\+\+PASSWORD}
+
+\mbox{\label{lora__32__firm_8ino_a8c83bc760185689dd4dd65602e2f0cda}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!WIFI\_PASSWORD@{WIFI\_PASSWORD}}
+\index{WIFI\_PASSWORD@{WIFI\_PASSWORD}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{WIFI\_PASSWORD}
+{\footnotesize\ttfamily char$\ast$ WIFI\+\_\+\+PASSWORD}
+
+\mbox{\label{lora__32__firm_8ino_acfbdc371ef3f82e0319587e6be185631}} 
+\index{lora\_32\_firm.ino@{lora\_32\_firm.ino}!WIFI\_SSID@{WIFI\_SSID}}
+\index{WIFI\_SSID@{WIFI\_SSID}!lora\_32\_firm.ino@{lora\_32\_firm.ino}}
+\doxysubsubsection{WIFI\_SSID}
+{\footnotesize\ttfamily char$\ast$ WIFI\+\_\+\+SSID}
+
